@@ -39,9 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: GestureDetector(
                         onTap: () => Navigator.pushReplacementNamed(context, RouteStringManager.drinkDetailsScreen),
                         child: CustomDrinkCard(
-                          imagePath: DrinkCardModel.drinks[index].imagePath,
-                          name: DrinkCardModel.drinks[index].name,
-                          description: DrinkCardModel.drinks[index].description,
+                          imagePath: DrinkModel.drinks[index].imagePath,
+                          name: DrinkModel.drinks[index].name,
+                          description: DrinkModel.drinks[index].description,
+                          price: "",
                         ),
                       ),
                     );
@@ -49,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
               separatorBuilder: (context, index) => Container(),
-              itemCount: DrinkCardModel.drinks.length,
+              itemCount: DrinkModel.drinks.length,
             ),
           ),
         ],
